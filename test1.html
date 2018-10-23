@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // var ary = [1,2,3,4];
+    // var obj = {name:'zf',age:9}
+    // obj.name;
+    // // var a = 'name';
+    // // obj.a
+    // for(var k in obj){
+        
+    //     // console.log(k)
+    //     // console.log(obj.k)//obj[k]
+    //     // console.log(obj['k'])
+    //     console.log(obj.age)
+    // }
+    // var a = 0&&12;
+    // var b =1||12;
+    // console.log(a)
+    // console.log(b)
+    // var c = Number('123')
+    // isNaN(c);
+    // var d = Number('0');
+    // console.log(d)
+    var ary = ['1','2','3,','4']
+    // ary.push(5,3,4,5,5);//给数组的末尾添加项
+    var n = ary.push(5,3,4,5,5)
+    console.log(n,ary)
+    console.log(ary);
+
+    function fun(){
+        return;
+        //return有两个作用：一个打断函数的执行
+        //另一个是返回结果给外界。不写return时默认返回
+
+        console.log(1111);
+    }
+    var f = fun();
+
+
+    var ary = [1,2,3,4];
+    var item = ary.pop();//删除数组的最后一项
+    var n =ary.unshift(100);//向数组的首位增加项
+    console.log(item,n)
+
+    ary = [65,34,688,456,879];
+    ary3=ary.sort(function(a,b){
+        return a-b;
+        //返回值a - b 就是一个升序
+        // 返回 b-a 就是一个降序
+    })//sort 的返回结果是排好序之后的数组
+    console.log(ary)
+    ary.reverse() //数组的反转，返回记过跟原数组是同一个地址
+
+
+    //forEach
+    arys = [10,20,30,40];
+    arys.forEach(function(item,index){
+       //item 是循环数组的每一项
+       //index 是循环第一项的索引        
+    })
+    var ary2 = arys.filter(function(item,index){
+     return true;    
+    }
+    )
+    // var ary = [];
+    // var ary2 = [];
+    // var ary3 = ary2;
+    // console.log(ary === ary2)
+    
+</script>
