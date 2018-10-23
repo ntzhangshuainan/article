@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button id="one" name="btn">1</button>
+    <button id="two" name="btn">2</button>
+    <button id="three" name="btn">3</button>
+    <button id="four" name="btn">4</button>
+
+    
+    <script>
+
+        时间的循环绑定
+        var btns = document.getElementsByTagName('button');
+        // console.log(str);
+        //  str[0].onclick = function(){
+        //     alert(1);
+        //  }
+        for(let i = 0; i<btns.length;i++){
+            btns[i].onclick = function(){
+                alert(this.innerHTML);
+            }
+        }
+        
+     </script>
+</body>
+</html>

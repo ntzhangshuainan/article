@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+     span{
+         width: 200px;
+         height: 200px;
+         display: block;
+     }
+     div.tt{
+         height: 200px;
+         width: 200px;
+         border-radius: 50%;
+         /* background:red; */
+         border: 10px dashed #000;
+         background: linear-gradient(left top,red,blue,green);
+         background: -webkit-linear-gradient(left top,red,blue,green);
+         line-height: 200px;
+         text-align: center;
+         box-shadow: 3px 3px 3px 3px #000;
+     }
+     .nn{
+         width: 200px;
+         height: 100px;
+         border: 2px solid #ccc;
+         border-radius: 50%;
+         line-height: 100px;
+         text-align: center;
+         background: -webkit-linear-gradient(left top,red blue green);
+     }
+     .one{
+         width: 100px;
+         height: 100px;
+         background: #ccc;
+         border: 10px dashed #000;
+         padding: 20px;
+         box-sizing:border-box;
+     }
+    </style>
+</head> 
+<body>
+    <span>软件学院</span>
+    <div class="tt">石家庄职业技术学院</div>
+    <div class="nn">前端培优班</div>
+    <div class="one"></div>
+</body>
+</html>
+<script>
+// <!-- 常见的行内元素:
+//       span  a em i strong
+        // 常见的块元素：
+        // div h系列 ul(ol) li p
+        // header main footer
+        // 标签语文化：对应的标签对应的事
+        //宽和高对于行内元素没有效果
+        //  dashed:虚线；
+        //id选择器的权重100
+        //类10
+        //标准盒子模型  border padding 都是向内撑
+        //box-sizing
+        //数组属于引用数字类型
+        //Nan(not a number) 
+        
+//  -->
+    //   var str = '145555.123aa';
+    //   console.log(Number(str));//只要有非数字就是nan
+    //   console.log(parseInt(str));//parseInt 只要第一个字符事非数字，那么结果就是Nan
+    //布尔数据类型中有5个事false 其他全事true
+    //false: 0 NaN '' null undefind
+    //两个=相对比较 三个=绝对比较
+    //==相对比较 会把==两边数据类型转换为同一种类型
+    
+    //！表示取反 过程先转换为bolean类型再取反
+    //!! 表示取反后再取反 这个操作的效果等同于 Boolean() 转换
+    //!!!先看=两边是否事同一类型，若不是则直接false,若是则再去比较值是否相等
+    
+    
+    //js中数据类型分为两大类：
+        //  基本数据类型为 string  number boolean null undefined
+        //  引用数据类型：[] () function Data Math 正则
+        //基本数据类型操作的都是一个值，引用数据类型操作的都是一个地址
+      
+
+        var name = '张帅楠',age =20;
+        console.log('我的名字是'+name+'我的年龄是'+age);
+        
+        var str = `我的名字是${name} 我的年纪是${age}`;
+        console.log(str);
+       //若想用单引号包含引号我们需要用\将字符穿分隔开
+
+       
+      //对象中获取对象的两种方式   一种是打点
+      //另一种是[],中括号这种方式一般适用于 属性值或变量获取的情况
+      var obj = {name:'sn',age:19}
+      console.log(obj.name);
+  
+        function sum(a,b,c){
+          
+          console.log(arguments);//arguments实参集合；
+        //   console.log(a,b,c);
+          
+         var sum=0;
+          for(var i=0;i<arguments.length;i++){
+              console.log(arguments[i])
+              sum = sum+arguments[i];
+          }
+          return sum;
+      }
+      var q =sum(1,2,3,4,5);
+      console.log(q);
+
+      var a=1||2;
+      console.log(a);
+
+      var b=1 && 2;
+      console.log(b);
+
+      var c=0||2;
+      console.log(c);
+      var d = 0&&2;
+      console.log(d);
+
+      console.log([]==false);
+      console.log(![]==false);
+
+      isNaN(1/'a')//判断参数是否是NaN 若是NaN 返回true； 若不是NaN返回false
+
+      null == undefined;//true    
+      null ===undefined;//false
+
+      console.log(typeof(1));//查看数据类型
+      var s = typeof typeof 1;
+      console.log(s); //typeof只要超过两个返回结果是字符串
+      Number([]) //0
+
+     for(var i=0; i<10; i++){
+        switch(i%4){
+            case 1:
+        //   console.log()
+        //   break;
+            case 3:
+        //   console.log()
+              i+=1;
+              break;
+            case 0:
+            case 2:
+            i+=2;
+            break;
+            default:i+=4;    //default 其他 
+      }
+     }
+    console.log(i);
+</script>
