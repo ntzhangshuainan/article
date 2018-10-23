@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./Jquery/jquery.min.js">
+	</script>
+    <style type="text/css">
+    *{
+        padding: 0px;
+        margin:0px;
+     }
+     .div{
+        width: 600px;
+        height: 175px;
+        margin: 0 auto;
+     }
+     .div ul{
+        width: 600px;
+        height: 35px;
+        list-style: none;
+        display: flex;
+        flex-wrap:wrap;
+     }
+     .div ul li{
+        width: 200px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        font-family:  "微软雅黑";
+        color: #04d;
+        font-size: 18px;
+        
+     }
+     .anniu{
+        width: 200px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        font-family:  "微软雅黑";
+        color: #000;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        margin: 0 auto;
+        margin-top: 20px;
+     }
+     .promo span{
+        color: #ff4500;
+     }
+    </style>
+</head>
+<body>
+  <div class="div">
+	<ul>
+		<li><span>佳能</span></li>
+		<li><span>索尼</span></li>
+		<li><span>三星</span></li>
+		<li><span>尼康</span></li>
+		<li><span>松下</span></li>
+		<li><span>富士</span></li>
+		<li><span>柯达</span></li>
+		<li><span>宾得</span></li>
+		<li><span>理光</span></li>
+		<li><span>明基</span></li>
+		<li><span>爱国者</span></li>
+		<li><span>卡西欧</span></li>
+		<li><span>奥林巴斯</span></li>
+		<li><span>其他品牌</span></li>
+	</ul>
+	</div>
+    <div class="anniu">精简显示品牌</div>
+    <script type="text/javascript">
+    $(function(){
+      $('.anniu').click(function(){
+         var lis=$('.div li:gt(5):not(:last)');
+          //查看lis是否隐藏，visible没有隐藏
+           if(lis.is(':visible')){
+             lis.hide();
+             $(".div li").removeClass('promo');
+              $(".anniu").text('显示全部品牌');
+
+        }else{
+            lis.show();//显示lis
+            $(".div li:contains('佳能')").addClass('promo');
+            $(".div li:contains('尼康')").addClass('promo');
+            $(".div li:contains('奥林巴斯')").addClass('promo');
+            $(".anniu").text('精简显示品牌');
+
+        }
+
+      })
+    })
+  
+    </script>
+</body>
+</html>
